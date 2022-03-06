@@ -20,7 +20,7 @@ pipeline {
     }
     post{
         always{
-            emailext body: 'Syntax Error', subject: 'Build Failed', to: 'shailesh2405@gmail.com'
+            mail bcc: '', body: 'Jenkins Body', cc: '', from: '', replyTo: '', subject: 'Jenkins test', to: 'neha.ck05@gmail.com'
         }
     }
 }
