@@ -1,10 +1,20 @@
 pipeline {
     agent any
 
+    tools {
+        // Install the Maven version configured as "M3" and add it to the path.
+        maven "M3"
+    }
+    
     stages {
         stage('build') {
             steps {
                 echo 'Hello Build'
+                git 'https://github.com/shailesh2405/demoIDFC.git'
+
+                // Run Maven on a Unix agent.
+                bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                echo 'Hello Build complete'
             }
         }
         stage('test') {
