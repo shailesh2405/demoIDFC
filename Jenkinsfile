@@ -8,7 +8,7 @@ pipeline {
     
     stages {
         stage('build') {
-            steps {
+            steps { 
                 echo 'Hello Build'
                 git 'https://github.com/shailesh2405/demoIDFC.git'
 
