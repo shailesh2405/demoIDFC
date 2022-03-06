@@ -10,7 +10,7 @@ pipeline {
         stage('build') {
             steps { 
                 echo 'Hello Build'
-                git branch: 'master',url: 'https://github.com/shailesh2405/demoIDFC.git'
+                git branch: 'main',url: 'https://github.com/shailesh2405/demoIDFC.git'
 
                 // Run Maven on a Unix agent.
                 bat "mvn -Dmaven.test.failure.ignore=true clean package"
