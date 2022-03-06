@@ -20,7 +20,7 @@ pipeline {
     }
     post{
         always{
-            mail bcc: '', body: 'Jenkins Body', cc: '', from: '', replyTo: '', subject: 'Jenkins test', to: 'neha.ck05@gmail.com'
+            mail bcc: '', body: 'Jenkins Body', cc: '', from: '', replyTo: '', subject: 'Jenkins test', to: 'neha.ckt05@gmail.com'
         }
     }
 }
